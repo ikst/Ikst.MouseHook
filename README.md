@@ -1,6 +1,6 @@
 # Ikst.MouseHook
-This is a library to realize global mouse hooks in .net windows applications.
-Mouse events can be triggered for applications that do not have a screen, or for mouse operations outside of a window.
+This is a library to realize global mouse hooks in .net windows applications.  
+Mouse events can be triggered for applications that do not have a screen, or for mouse operations outside of a window.  
 The events that can occur are as follows
 - MouseMove
 - MouseWheel
