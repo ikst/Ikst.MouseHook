@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.1;net5</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.2.0</Version>
+    <Version>0.2.1</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Description>This is a global mouse hook library for windows application.</Description>
     <Company>Ikst</Company>
@@ -16,11 +16,7 @@
 https://github.com/ikst/Ikst.MouseHook/blob/master/README.md</PackageReleaseNotes>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp3.1|AnyCPU'">
-    <DocumentationFile>C:\Users\root\Source\Repos\Ikst.MouseHook\Ikst.MouseHook\Ikst.MouseHook.xml</DocumentationFile>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netcoreapp3.1|AnyCPU'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>C:\Users\root\Source\Repos\Ikst.MouseHook\Ikst.MouseHook\Ikst.MouseHook.xml</DocumentationFile>
   </PropertyGroup>
 

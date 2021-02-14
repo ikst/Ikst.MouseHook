@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ikst.MouseHook</name>
+    </assembly>
+    <members>
+        <member name="E:Ikst.MouseHook.MouseHook.LeftButtonDown">
+            <summary></summary>
+        </member>
+        <member name="E:Ikst.MouseHook.MouseHook.LeftButtonUp">
+            <summary></summary>
+        </member>
+        <member name="E:Ikst.MouseHook.MouseHook.RightButtonDown">
+            <summary></summary>
+        </member>
+        <member name="E:Ikst.MouseHook.MouseHook.RightButtonUp">
+            <summary></summary>
+        </member>
+        <member name="E:Ikst.MouseHook.MouseHook.MouseMove">
+            <summary></summary>
+        </member>
+        <member name="E:Ikst.MouseHook.MouseHook.MouseWheel">
+            <summary></summary>
+        </member>
+        <member name="E:Ikst.MouseHook.MouseHook.DoubleClick">
+            <summary></summary>
+        </member>
+        <member name="E:Ikst.MouseHook.MouseHook.MiddleButtonDown">
+            <summary></summary>
+        </member>
+        <member name="E:Ikst.MouseHook.MouseHook.MiddleButtonUp">
+            <summary></summary>
+        </member>
+        <member name="P:Ikst.MouseHook.MouseHook.IsStarted">
+            <summary>開始状態</summary>
+        </member>
+        <member name="M:Ikst.MouseHook.MouseHook.Start">
+            <summary>
+            マウスフック開始
+            </summary>
+        </member>
+        <member name="M:Ikst.MouseHook.MouseHook.Stop">
+            <summary>
+            マウスフック終了
+            </summary>
+        </member>
+        <member name="M:Ikst.MouseHook.MouseHook.Finalize">
+            <summary>
+            デストラクタ
+            </summary>
+        </member>
+        <member name="T:Ikst.MouseHook.MouseHook.NativeMethods">
+            <summary>
+            WinAPI
+            </summary>
+        </member>
+    </members>
+</doc>
