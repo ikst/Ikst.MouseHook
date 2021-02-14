@@ -17,6 +17,8 @@ All events contain a [MSLLHOOKSTRUCT](https://docs.microsoft.com/windows/win32/a
 - Create an instance and use the start method to start the hook.
 - The event is triggered by a mouse operation.
 - In the event, you can get the MSLLHOOKSTRUCT structure.
+
+[e.g.] Display the mouse coordinates of the left click in the window title.
 ```C#
 public partial class MainWindow : Window
 {

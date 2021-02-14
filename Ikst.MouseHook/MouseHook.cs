@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 
 namespace Ikst.MouseHook
 {
-    /// <summary>
-    /// Class for intercepting low level Windows mouse hooks.
-    /// </summary>
+
     public class MouseHook
     {
+
+        #region 定数
 
         private const int WH_MOUSE_LL = 14;
 
@@ -22,6 +22,9 @@ namespace Ikst.MouseHook
         private const int WM_MBUTTONDOWN = 0x0207;
         private const int WM_MBUTTONUP = 0x0208;
 
+        #endregion
+
+        #region 構造体
 
         [StructLayout(LayoutKind.Sequential)]
         public struct POINT
@@ -41,42 +44,45 @@ namespace Ikst.MouseHook
             public IntPtr dwExtraInfo;
         }
 
-
-        /// <summary>
-        /// マウスフックイベント
-        /// </summary>
-        internal delegate IntPtr MouseHookHandler(int nCode, IntPtr wParam, IntPtr lParam);
-        internal MouseHookHandler hookHandler;
-
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="mouseStruct"></param>
-        public delegate void MouseHookCallback(MSLLHOOKSTRUCT mouseStruct);
-
-
-        #region イベント
-        public event MouseHookCallback LeftButtonDown;
-        public event MouseHookCallback LeftButtonUp;
-        public event MouseHookCallback RightButtonDown;
-        public event MouseHookCallback RightButtonUp;
-        public event MouseHookCallback MouseMove;
-        public event MouseHookCallback MouseWheel;
-
-        [Obsolete("動作しません", error: true)]
-        public event MouseHookCallback DoubleClick;
-
-        public event MouseHookCallback MiddleButtonDown;
-        public event MouseHookCallback MiddleButtonUp;
         #endregion
 
-        /// <summary>フックID</summary>
+        #region デリゲート
+
+        public delegate void MouseHookCallback(MSLLHOOKSTRUCT mouseStruct);
+        internal delegate IntPtr MouseHookHandler(int nCode, IntPtr wParam, IntPtr lParam);
+
+        #endregion
+
+        #region イベント
+
+        /// <summary></summary>
+        public event MouseHookCallback LeftButtonDown;
+        /// <summary></summary>
+        public event MouseHookCallback LeftButtonUp;
+        /// <summary></summary>
+        public event MouseHookCallback RightButtonDown;
+        /// <summary></summary>
+        public event MouseHookCallback RightButtonUp;
+        /// <summary></summary>
+        public event MouseHookCallback MouseMove;
+        /// <summary></summary>
+        public event MouseHookCallback MouseWheel;
+        /// <summary></summary>
+        [Obsolete("動作しません", error: true)]
+        public event MouseHookCallback DoubleClick;
+        /// <summary></summary>
+        public event MouseHookCallback MiddleButtonDown;
+        /// <summary></summary>
+        public event MouseHookCallback MiddleButtonUp;
+
+        #endregion
+
+
+        private MouseHookHandler hookHandler;
         private IntPtr hookID = IntPtr.Zero;
 
         /// <summary>開始状態</summary>
         public bool IsStarted { get; private set; }
-
 
         /// <summary>
         /// マウスフック開始
@@ -116,11 +122,7 @@ namespace Ikst.MouseHook
             Stop();
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="proc"></param>
-        /// <returns>Hook ID</returns>
+
         private IntPtr SetHook(MouseHookHandler proc)
         {
             using (ProcessModule module = Process.GetCurrentProcess().MainModule)
@@ -128,9 +130,6 @@ namespace Ikst.MouseHook
         }
 
 
-        /// <summary>
-        /// 
-        /// </summary>
         private IntPtr HookFunc(int nCode, IntPtr wParam, IntPtr lParam)
         {
 
@@ -198,5 +197,6 @@ namespace Ikst.MouseHook
         }
 
         #endregion
+
     }
 }
