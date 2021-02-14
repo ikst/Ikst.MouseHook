@@ -30,11 +30,10 @@ namespace Sample
 
             mh.LeftButtonDown += (st) =>
             {
-                this.Title = DateTime.Now.ToString();
+                this.Title = $"X:{st.pt.x} Y:{st.pt.y}";
             };
 
             mh.Start();
-
         }
     }
 }
