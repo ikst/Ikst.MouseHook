@@ -5,7 +5,7 @@ on:
   push:
     branches: [ master ]
     paths:
-    - "Ikst.MouseHook.csproj"
+    - "Ikst.MouseHook/*.csproj"
   pull_request:
     branches: [ master ]
 
