@@ -22,7 +22,7 @@ namespace Sample
     public partial class MainWindow : Window
     {
 
-        private MouseHook mh = new MouseHook();
+        private readonly MouseHook mh = new MouseHook();
 
         public MainWindow()
         {
@@ -32,7 +32,6 @@ namespace Sample
             {
                 this.Title = DateTime.Now.ToString();
             };
-
 
             mh.Start();
 
