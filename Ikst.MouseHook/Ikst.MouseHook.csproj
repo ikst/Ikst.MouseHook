@@ -3,11 +3,11 @@
   <PropertyGroup>
     <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.2.1</Version>
+    <Version>1.0.0</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Description>This is a global mouse hook library for windows application.</Description>
-    <Company>Ikst</Company>
-    <Authors>Ikst</Authors>
+    <Company>ikst</Company>
+    <Authors>ikst</Authors>
     <PackageProjectUrl>https://github.com/ikst/Ikst.MouseHook</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ikst/Ikst.MouseHook</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
